@@ -1,16 +1,21 @@
-export const App = () => {
+import React, { useState } from 'react';
+import './index.css';
+import Feedback from './components/Feedback';
+
+const App = () => {
+  const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
+
+  const handleButtonClick = type => {
+    setFeedback(prevFeedback => ({
+      ...prevFeedback,
+      [type]: prevFeedback[type] + 1,
+    }));
+  };
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Feedback feedback={feedback} onFeedbackChange={handleButtonClick} />
+    </>
   );
 };
+
+export default App;
