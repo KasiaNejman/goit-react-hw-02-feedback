@@ -12,6 +12,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
 }
 #root {
   max-width: 1280px;
@@ -22,15 +23,15 @@ code {
 
 .logo {
   height: 7em;
-  padding: 1.5em;
+  padding: 4em;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #64ffe890);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #fb9961b4);
 }
 
 @keyframes logo-spin {
@@ -49,9 +50,9 @@ code {
 }
 
 .card {
-  padding: 2em;
+  padding: 4em;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #93680c;
 }
